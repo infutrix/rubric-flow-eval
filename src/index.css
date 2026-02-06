@@ -2,95 +2,134 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Gradesmith Design System
+   Aesthetic: Research Lab / Institutional Infrastructure / Serious AI
+   NO: gradients, SaaS cards, EdTech clichés, purple
+   YES: typography hierarchy, whitespace, structure, muted accents
 */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap');
 
 @layer base {
   :root {
+    /* Core palette - institutional, serious, not startup */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 20% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 15% 98%;
+    --card-foreground: 220 20% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 20% 10%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Deep charcoal - authoritative, serious */
+    --primary: 220 15% 15%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Warm slate - subtle warmth */
+    --secondary: 30 5% 96%;
+    --secondary-foreground: 220 15% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted: For quiet elements */
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Muted terracotta - institutional warmth, NOT tech */
+    --accent: 20 30% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* System colors */
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 10% 88%;
+    --input: 220 10% 88%;
+    --ring: 220 15% 15%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Typography scale - institutional hierarchy */
+    --font-display: 'Source Serif 4', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'Consolas', monospace;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Spacing rhythm */
+    --section-gap: 8rem;
+    --content-gap: 4rem;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Custom: surface layers */
+    --surface-elevated: 220 15% 99%;
+    --surface-sunken: 220 10% 95%;
+    
+    /* Custom: text hierarchy */
+    --text-display: 220 20% 8%;
+    --text-body: 220 15% 25%;
+    --text-caption: 220 10% 50%;
+    --text-accent: 20 30% 45%;
 
+    /* Custom: borders */
+    --border-subtle: 220 10% 92%;
+    --border-strong: 220 15% 75%;
+
+    /* Sidebar - unused but required */
+    --sidebar-background: 220 15% 98%;
+    --sidebar-foreground: 220 20% 10%;
+    --sidebar-primary: 220 15% 15%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 220 10% 96%;
+    --sidebar-accent-foreground: 220 20% 10%;
+    --sidebar-border: 220 10% 88%;
+    --sidebar-ring: 220 15% 15%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 20% 6%;
+    --foreground: 220 10% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 18% 10%;
+    --card-foreground: 220 10% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 20% 8%;
+    --popover-foreground: 220 10% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 220 10% 92%;
+    --primary-foreground: 220 20% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 220 10% 92%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 20 35% 55%;
+    --accent-foreground: 220 20% 6%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 220 10% 70%;
+
+    --surface-elevated: 220 18% 12%;
+    --surface-sunken: 220 20% 4%;
+    
+    --text-display: 220 10% 95%;
+    --text-body: 220 10% 80%;
+    --text-caption: 220 10% 55%;
+    --text-accent: 20 40% 60%;
+
+    --border-subtle: 220 15% 18%;
+    --border-strong: 220 10% 35%;
+
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 220 10% 92%;
+    --sidebar-primary: 220 10% 92%;
+    --sidebar-primary-foreground: 220 20% 8%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 220 10% 92%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 220 10% 70%;
   }
 }
 
@@ -99,7 +138,205 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  /* Typography defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-display tracking-tight;
+  }
+
+  p {
+    @apply text-body leading-relaxed;
+  }
+
+  code, pre {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  /* Section containers */
+  .section-container {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-24 lg:py-32;
+  }
+
+  .section-spacing-lg {
+    @apply py-32 lg:py-40;
+  }
+
+  /* Typography utilities */
+  .text-display {
+    color: hsl(var(--text-display));
+  }
+
+  .text-body {
+    color: hsl(var(--text-body));
+  }
+
+  .text-caption {
+    color: hsl(var(--text-caption));
+  }
+
+  .text-accent {
+    color: hsl(var(--text-accent));
+  }
+
+  /* Display headings - institutional scale */
+  .heading-hero {
+    @apply font-display text-display font-semibold;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+
+  .heading-section {
+    @apply font-display text-display font-semibold;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .heading-subsection {
+    @apply font-display text-display font-medium;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    line-height: 1.25;
+  }
+
+  /* Body text variants */
+  .body-large {
+    @apply text-body font-body text-lg lg:text-xl leading-relaxed;
+  }
+
+  .body-regular {
+    @apply text-body font-body text-base leading-relaxed;
+  }
+
+  .body-small {
+    @apply text-caption font-body text-sm leading-normal;
+  }
+
+  /* Monospace labels - for technical/system feel */
+  .label-mono {
+    @apply font-mono text-xs uppercase tracking-widest text-caption;
+  }
+
+  .label-mono-accent {
+    @apply font-mono text-xs uppercase tracking-widest text-accent;
+  }
+
+  /* Surface utilities */
+  .surface-elevated {
+    background-color: hsl(var(--surface-elevated));
+  }
+
+  .surface-sunken {
+    background-color: hsl(var(--surface-sunken));
+  }
+
+  /* Border utilities */
+  .border-subtle {
+    border-color: hsl(var(--border-subtle));
+  }
+
+  .border-strong {
+    border-color: hsl(var(--border-strong));
+  }
+
+  /* Institutional divider */
+  .divider-institutional {
+    @apply w-full h-px bg-border;
+  }
+
+  /* Stat block */
+  .stat-value {
+    @apply font-display font-semibold text-display;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .stat-label {
+    @apply font-body text-sm text-caption uppercase tracking-wide mt-2;
+  }
+
+  /* Layer indicator - for architecture diagrams */
+  .layer-indicator {
+    @apply font-mono text-xs px-2 py-1 rounded-sm bg-secondary text-caption border border-border;
+  }
+
+  /* Confidence indicator */
+  .confidence-high {
+    @apply bg-emerald-50 text-emerald-700 border-emerald-200;
+  }
+
+  .confidence-medium {
+    @apply bg-amber-50 text-amber-700 border-amber-200;
+  }
+
+  .confidence-low {
+    @apply bg-red-50 text-red-700 border-red-200;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Grid utilities */
+  .grid-asymmetric {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .grid-asymmetric {
+      grid-template-columns: 2fr 3fr;
+      gap: 4rem;
+    }
+  }
+
+  .grid-asymmetric-reverse {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .grid-asymmetric-reverse {
+      grid-template-columns: 3fr 2fr;
+      gap: 4rem;
+    }
   }
 }
