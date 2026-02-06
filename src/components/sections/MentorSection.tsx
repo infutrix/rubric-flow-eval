@@ -12,8 +12,8 @@ const features = [
     description: "Identify specific knowledge gaps from evaluation data. Target weaknesses with precision.",
   },
   {
-    title: "NEP-Aligned Personalization",
-    description: "Supports India's National Education Policy vision of competency-based, personalized education.",
+    title: "Competency-Based Learning",
+    description: "Supports modern educational frameworks focused on mastery and personalized progression.",
   },
 ];
 

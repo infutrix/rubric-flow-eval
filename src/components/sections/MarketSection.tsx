@@ -4,26 +4,26 @@ import { useRef } from "react";
 
 const markets = [
   {
-    segment: "Indian Schools",
-    detail: "CBSE, ICSE, State Boards, Private Chains",
+    segment: "K-12 Schools",
+    detail: "Public and private school systems worldwide",
   },
   {
-    segment: "Coaching Institutes",
-    detail: "Test prep and competitive exam coaching centers",
+    segment: "Test Prep & Coaching",
+    detail: "Competitive exam and standardized test preparation",
   },
   {
     segment: "Higher Education",
-    detail: "Universities and engineering colleges",
+    detail: "Universities, colleges, and professional schools",
   },
   {
-    segment: "International",
-    detail: "IB, IGCSE, US & UK institutions",
+    segment: "Examination Boards",
+    detail: "National and regional certification bodies",
   },
 ];
 
 const drivers = [
   "Teacher shortages across institutions",
-  "Increasing compliance pressure",
+  "Increasing compliance and audit requirements",
   "Scale requirements beyond manual capacity",
   "Demand for faster feedback cycles",
 ];

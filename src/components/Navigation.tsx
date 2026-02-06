@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoGradesmith from "@/assets/logo-gradesmith.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,10 +29,12 @@ const Navigation = () => {
         <div className="section-container py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3">
-              <span className="font-display text-xl font-semibold text-display">
-                Gradesmith
-              </span>
+            <a href="#" className="flex items-center">
+              <img 
+                src={logoGradesmith} 
+                alt="Gradesmith" 
+                className="h-8 w-auto"
+              />
             </a>
 
             {/* Nav links - minimal */}
