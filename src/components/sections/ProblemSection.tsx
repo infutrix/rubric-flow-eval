@@ -8,12 +8,12 @@ const stats = [
     label: "Hours spent grading handwritten exams globally each year",
   },
   {
-    value: "8 mo",
-    label: "Per year lost by Indian faculty to assessment work",
+    value: "40%",
+    label: "Of faculty time consumed by assessment and evaluation work",
   },
   {
     value: "65%",
-    label: "Of faculty report excessive workload from evaluation",
+    label: "Of educators report excessive workload from evaluation",
   },
 ];
 

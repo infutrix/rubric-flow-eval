@@ -26,7 +26,7 @@ const ProofSection = () => {
           transition={{ delay: 0.1, duration: 0.6 }}
           className="heading-section max-w-3xl mb-16"
         >
-          Real-world validation at Thapar Institute.
+          Real-world validation in production.
         </motion.h2>
 
         {/* Case study */}
@@ -39,15 +39,15 @@ const ProofSection = () => {
           >
             <div className="mb-8">
               <h3 className="font-display text-xl font-medium text-display mb-2">
-                Thapar Institute of Engineering & Technology
+                Engineering University Pilot
               </h3>
-              <p className="body-small">C Programming Examination Pilot</p>
+              <p className="body-small">Programming Examination Evaluation</p>
             </div>
 
             <div className="space-y-6 mb-12">
               <p className="body-large">
-                By leveraging Gradesmith, TIET achieved an 80% reduction in grading time 
-                for their C Programming examinations—processing answer sheets in hours 
+                By leveraging Gradesmith, the institution achieved an 80% reduction in grading time 
+                for their programming examinations—processing answer sheets in hours 
                 instead of weeks.
               </p>
               <p className="body-regular">

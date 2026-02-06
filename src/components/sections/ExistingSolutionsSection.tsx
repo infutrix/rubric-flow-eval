@@ -2,16 +2,16 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-const westernIssues = [
-  "Fail with Indian handwriting nuances",
+const legacyIssues = [
+  "Fail with diverse handwriting styles",
   "Assume clean, structured layouts",
   "Essay- or MCQ-centric models",
   "Black-box grading without transparency",
-  "Expensive without local context",
+  "Expensive without contextual depth",
 ];
 
-const indianIssues = [
-  "Limited to K–12 assessment",
+const modernIssues = [
+  "Limited to specific exam formats",
   "Break on flowcharts, diagrams, strike-outs",
   "Rigid, rule-based evaluation",
   "Cannot handle mixed-format exams",
@@ -47,15 +47,15 @@ const ExistingSolutionsSection = () => {
 
         {/* Two columns - not cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Western platforms */}
+          {/* Legacy platforms */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <h3 className="label-mono-accent mb-6">Western Platforms</h3>
+            <h3 className="label-mono-accent mb-6">Legacy Platforms</h3>
             <ul className="space-y-4">
-              {westernIssues.map((issue, index) => (
+              {legacyIssues.map((issue, index) => (
                 <li key={index} className="flex items-start gap-4">
                   <span className="w-1.5 h-1.5 rounded-full bg-border-strong mt-2.5 shrink-0" />
                   <span className="body-regular">{issue}</span>
@@ -64,15 +64,15 @@ const ExistingSolutionsSection = () => {
             </ul>
           </motion.div>
 
-          {/* Indian solutions */}
+          {/* Modern tools */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            <h3 className="label-mono-accent mb-6">Indian Solutions</h3>
+            <h3 className="label-mono-accent mb-6">Modern AI Tools</h3>
             <ul className="space-y-4">
-              {indianIssues.map((issue, index) => (
+              {modernIssues.map((issue, index) => (
                 <li key={index} className="flex items-start gap-4">
                   <span className="w-1.5 h-1.5 rounded-full bg-border-strong mt-2.5 shrink-0" />
                   <span className="body-regular">{issue}</span>

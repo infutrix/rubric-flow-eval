@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import logoOsprey from "@/assets/logo-osprey.png";
 
 const capabilities = [
   {
@@ -13,7 +14,7 @@ const capabilities = [
   },
   {
     title: "Multilingual Script Support",
-    description: "Handles mixed-language responses common in Indian exams—Hindi, English, regional languages, and code-switching.",
+    description: "Handles mixed-language responses across multiple languages and code-switching within answers.",
   },
   {
     title: "Layout Understanding",
@@ -32,25 +33,26 @@ const OspreySection = () => {
   return (
     <section ref={ref} className="section-spacing surface-sunken">
       <div className="section-container">
-        {/* Section label */}
-        <motion.p
+        {/* Section label with logo */}
+        <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="label-mono mb-4"
+          className="flex items-center gap-4 mb-4"
         >
-          05 — Osprey© OCR Engine
-        </motion.p>
+          <p className="label-mono">05 — OCR Engine</p>
+        </motion.div>
 
-        {/* Section heading */}
-        <motion.h2
+        {/* Section heading with Osprey logo */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="heading-section max-w-3xl mb-6"
+          className="flex items-center gap-6 mb-6"
         >
-          The Vision Layer
-        </motion.h2>
+          <img src={logoOsprey} alt="Osprey" className="h-16 w-auto" />
+          <h2 className="heading-section">The Vision Layer</h2>
+        </motion.div>
 
         {/* Research-grade intro */}
         <motion.p
