@@ -89,12 +89,6 @@ const MarketSection = () => {
               ))}
             </ul>
 
-            {/* Market size callout */}
-            <div className="mt-12 border border-border p-6">
-              <p className="font-mono text-sm text-caption mb-2">Total Addressable Market</p>
-              <p className="stat-value text-3xl">$32B</p>
-              <p className="body-small mt-2">Global AI in education market by 2030</p>
-            </div>
           </motion.div>
         </div>
       </div>
