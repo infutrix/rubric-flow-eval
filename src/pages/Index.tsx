@@ -11,7 +11,7 @@ import OutputsSection from "@/components/sections/OutputsSection";
 import ProofSection from "@/components/sections/ProofSection";
 import MentorSection from "@/components/sections/MentorSection";
 import MarketSection from "@/components/sections/MarketSection";
-import BusinessSection from "@/components/sections/BusinessSection";
+
 import ClosingSection from "@/components/sections/ClosingSection";
 import Footer from "@/components/Footer";
 
@@ -60,8 +60,6 @@ const Index = () => {
       {/* 12. Market & Deployment */}
       <MarketSection />
       
-      {/* 13. Business Model */}
-      <BusinessSection />
       
       {/* 14. Closing */}
       <ClosingSection />
