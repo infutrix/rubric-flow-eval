@@ -11,7 +11,7 @@ import OutputsSection from "@/components/sections/OutputsSection";
 import ProofSection from "@/components/sections/ProofSection";
 import MentorSection from "@/components/sections/MentorSection";
 import MarketSection from "@/components/sections/MarketSection";
-
+import EngagementSection from "@/components/sections/EngagementSection";
 import ClosingSection from "@/components/sections/ClosingSection";
 import Footer from "@/components/Footer";
 
@@ -57,9 +57,11 @@ const Index = () => {
       {/* 11. Personal AI Mentor (Future) */}
       <MentorSection />
       
-      {/* 12. Market & Deployment */}
+      {/* 12. Where We Deploy */}
       <MarketSection />
       
+      {/* 13. Engagement Model */}
+      <EngagementSection />
       
       {/* 14. Closing */}
       <ClosingSection />

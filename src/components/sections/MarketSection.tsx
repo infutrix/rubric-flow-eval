@@ -42,7 +42,7 @@ const MarketSection = () => {
           transition={{ duration: 0.5 }}
           className="label-mono mb-4"
         >
-          11 — Market & Deployment
+          11 — Where We Deploy
         </motion.p>
 
         {/* Section heading */}

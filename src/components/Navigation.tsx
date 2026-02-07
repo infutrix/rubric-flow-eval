@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import logoGradesmith from "@/assets/logo-gradesmith.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +15,12 @@ const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinks = [
+    { href: "#architecture", label: "How it works" },
+    { href: "#proof", label: "Case Study" },
+    { href: "#engagement", label: "Engagement" },
+  ];
 
   return (
     <AnimatePresence>
@@ -26,43 +34,88 @@ const Navigation = () => {
             : "bg-transparent"
         }`}
       >
-        <div className="section-container py-4">
+        <div className="section-container py-3 md:py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <a href="#" className="flex items-center">
-              <img 
-                src={logoGradesmith} 
-                alt="Gradesmith" 
-                className="h-8 w-auto"
-              />
+            {/* Logo - Enhanced presentation */}
+            <a href="#" className="flex items-center gap-3 group">
+              <div className="relative">
+                <img 
+                  src={logoGradesmith} 
+                  alt="Gradesmith" 
+                  className="h-10 md:h-12 w-auto transition-transform group-hover:scale-105"
+                />
+              </div>
+              <div className="hidden sm:block">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-caption block leading-tight">
+                  Academic Evaluation
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-caption block leading-tight">
+                  Infrastructure
+                </span>
+              </div>
             </a>
 
-            {/* Nav links - minimal */}
+            {/* Nav links - Desktop */}
             <nav className="hidden md:flex items-center gap-8">
-              <a href="#architecture" className="font-mono text-xs uppercase tracking-wider text-caption hover:text-display transition-colors">
-                How it works
-              </a>
-              <a href="#proof" className="font-mono text-xs uppercase tracking-wider text-caption hover:text-display transition-colors">
-                Case Study
-              </a>
+              {navLinks.map((link) => (
+                <a 
+                  key={link.href}
+                  href={link.href} 
+                  className="font-mono text-xs uppercase tracking-wider text-caption hover:text-display transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
               <a 
                 href="mailto:pilot@gradesmith.ai" 
-                className="font-mono text-xs uppercase tracking-wider text-accent hover:text-display transition-colors"
+                className="font-mono text-xs uppercase tracking-wider px-4 py-2 border border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all"
               >
                 Request Pilot
               </a>
             </nav>
 
-            {/* Mobile - just CTA */}
-            <div className="md:hidden">
-              <a 
-                href="mailto:pilot@gradesmith.ai" 
-                className="font-mono text-xs uppercase tracking-wider text-accent"
-              >
-                Contact
-              </a>
-            </div>
+            {/* Mobile menu button */}
+            <button 
+              className="md:hidden p-2 text-display"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
+
+          {/* Mobile menu */}
+          <AnimatePresence>
+            {isMobileMenuOpen && (
+              <motion.nav
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="md:hidden overflow-hidden"
+              >
+                <div className="py-6 space-y-4 border-t border-border mt-4">
+                  {navLinks.map((link) => (
+                    <a 
+                      key={link.href}
+                      href={link.href} 
+                      className="block font-mono text-sm uppercase tracking-wider text-caption hover:text-display transition-colors py-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                  <a 
+                    href="mailto:pilot@gradesmith.ai" 
+                    className="block font-mono text-sm uppercase tracking-wider text-accent py-2"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Request Pilot →
+                  </a>
+                </div>
+              </motion.nav>
+            )}
+          </AnimatePresence>
         </div>
       </motion.header>
     </AnimatePresence>
