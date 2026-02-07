@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import heroAbstract from "@/assets/hero-abstract.jpg";
-import logoGradesmith from "@/assets/logo-gradesmith.png";
 
 const HeroSection = () => {
   return (
@@ -23,20 +22,6 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl"
         >
-          {/* Logo presentation - prominent on hero */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.5 }}
-            className="mb-8 md:mb-10"
-          >
-            <img 
-              src={logoGradesmith} 
-              alt="Gradesmith" 
-              className="h-14 md:h-20 lg:h-24 w-auto"
-            />
-          </motion.div>
-
           {/* Institutional label */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
