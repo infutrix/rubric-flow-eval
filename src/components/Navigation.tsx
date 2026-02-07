@@ -37,22 +37,12 @@ const Navigation = () => {
         <div className="section-container py-3 md:py-4">
           <div className="flex items-center justify-between">
             {/* Logo - Enhanced presentation */}
-            <a href="#" className="flex items-center gap-3 group">
-              <div className="relative">
-                <img 
-                  src={logoGradesmith} 
-                  alt="Gradesmith" 
-                  className="h-10 md:h-12 w-auto transition-transform group-hover:scale-105"
-                />
-              </div>
-              <div className="hidden sm:block">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-caption block leading-tight">
-                  Academic Evaluation
-                </span>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-caption block leading-tight">
-                  Infrastructure
-                </span>
-              </div>
+            <a href="#" className="flex items-center">
+              <img 
+                src={logoGradesmith} 
+                alt="Gradesmith" 
+                className="h-10 md:h-12 w-auto transition-transform hover:scale-105"
+              />
             </a>
 
             {/* Nav links - Desktop */}
