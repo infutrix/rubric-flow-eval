@@ -41,7 +41,7 @@ const Navigation = () => {
               <img
                 src={logoGradesmith}
                 alt="Gradesmith"
-                className="h-10 md:h-12 w-auto transition-transform hover:scale-105"
+                className="h-10 md:h-12 w-auto transition-transform hover:scale-105 bg-black py-2 pb-3 px-4 rounded-2xl"
               />
             </a>
 
