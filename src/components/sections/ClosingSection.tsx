@@ -21,8 +21,8 @@ const ClosingSection = () => {
           </h2>
 
           <p className="body-large mb-16">
-            From handwritten answer sheets to fair, fast, transparent grades—
-            at institutional scale.
+            From handwritten answer sheets to fair, fast, transparent grades— at
+            institutional scale.
           </p>
 
           {/* Understated CTA */}
@@ -32,11 +32,15 @@ const ClosingSection = () => {
             transition={{ delay: 0.4, duration: 0.5 }}
           >
             <a
-              href="mailto:pilot@gradesmith.ai"
+              href="https://infutrix.com/contact-us?utm_source=gradesmith_website"
               className="inline-flex items-center gap-3 font-mono text-sm text-display hover:text-accent transition-colors group"
             >
-              <span className="border-b border-current pb-1">Request an institutional pilot</span>
-              <span className="text-accent group-hover:translate-x-1 transition-transform">→</span>
+              <span className="border-b border-current pb-1">
+                Request an institutional pilot
+              </span>
+              <span className="text-accent group-hover:translate-x-1 transition-transform">
+                →
+              </span>
             </a>
           </motion.div>
         </motion.div>
